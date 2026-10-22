@@ -1,0 +1,23 @@
+{
+  "rubric_version": "1.0.0",
+  "status_definitions": {
+    "pass": "Every deterministic required constraint for the check is satisfied.",
+    "fail": "At least one deterministic required constraint is violated; a missing required value is a failure.",
+    "inconclusive": "The available deterministic interface cannot reliably judge the semantic behavior. Inconclusive is not a pass."
+  },
+  "checks": {
+    "production_route_intent": "The production graph reaches the expected branch when supplied the case's deterministic intent fixture.",
+    "scoring_path": "Only ANSWER, ADMITTED_UNKNOWN, and SKIP may create scored answer and analysis records; SKIP must be blank/no-evidence.",
+    "active_question": "Conversation-only turns retain the exact active question; substantive and skip turns progress according to the existing graph.",
+    "progress_counters": "Conversation-only turns preserve plan cursor, follow-up counts, and question history.",
+    "separate_conversation_history": "Conversational turns are recorded separately from aligned answers and analyses.",
+    "skip_no_evidence": "Skip is represented by an empty answer, blank classification, and zero correctness score.",
+    "skip_advances": "Skip advances using the normal graph progression.",
+    "adaptive_policy_action": "The production adaptive policy applies or safely rejects the fixture recommendation.",
+    "hint_answer_leakage": "A deterministic case-specific forbidden phrase is absent from the response; this narrow screen is not semantic proof.",
+    "natural_language_intent_accuracy": "Inconclusive offline: the intent label is supplied by a fixture, not predicted by a live model.",
+    "adaptive_semantic_relevance": "Inconclusive offline: fixtures cannot establish whether a generated follow-up is semantically relevant to candidate evidence.",
+    "hint_semantic_usefulness": "Inconclusive offline: fixtures cannot establish usefulness of a live generated hint."
+  },
+  "fixture_boundary": "The offline runner verifies production state transitions, routing, scoring boundaries, and adaptive policy validation. Fixture-supplied model outputs do not evaluate natural-language model quality."
+}

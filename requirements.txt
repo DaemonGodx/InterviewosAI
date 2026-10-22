@@ -1,0 +1,21 @@
+# LLM and graph runtime
+langchain-core>=0.2.0
+langchain-groq>=0.1.0
+groq>=0.4.0
+langgraph>=0.1.0
+pydantic>=2.0.0
+
+# Configuration, persistence, CLI, resume, and audio runtime
+python-dotenv>=1.0.0
+sqlalchemy>=2.0.0
+deepgram-sdk>=3.0.0
+sounddevice>=0.4.0
+soundfile>=0.12.0
+numpy>=1.20.0
+rich>=13.0.0
+pypdf>=4.0.0
+python-docx>=1.0.0
+
+# Automated test suite
+pytest>=8.0.0
+pytest-mock>=3.10.0
